@@ -1,7 +1,10 @@
 import React from 'react'
+import { HomeNavgationpanel } from './styled'
 
 export default () => {
   return (
-    <div></div>
+    <HomeNavgationpanel>
+      Home page
+    </HomeNavgationpanel>
   )
 }
