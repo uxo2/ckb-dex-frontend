@@ -1,10 +1,15 @@
 import React from 'react'
-import { HomeNavgationpanel } from './styled'
+import { 
+  HomeBox,
+  HomeContent 
+} from './styled'
 
 export default () => {
   return (
-    <HomeNavgationpanel>
-      Home page
-    </HomeNavgationpanel>
+    <HomeBox>
+      <HomeContent>
+        Home Content
+      </HomeContent>
+    </HomeBox>
   )
 }

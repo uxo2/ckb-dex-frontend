@@ -1,5 +1,14 @@
 export const HeaderNavgationLists = [
-  "兑换",
-  "提供流动性",
-  "撮合挖矿"
+  {
+    name: "Trade",
+    path: "/trade"
+  },
+  {
+    name: "Pool",
+    path: "/pool"
+  },
+  {
+    name: "Match",
+    path: "/match"
+  }
 ]

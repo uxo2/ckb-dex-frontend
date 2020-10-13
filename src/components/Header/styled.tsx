@@ -1,20 +1,28 @@
 import styled from 'styled-components'
 
+export const HeaderBox = styled.div`
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-bottom: 1px solid #e3e4e5;
+  background-color: #000;
+  color: #fff;
+`
+
 export const HeaderPanel = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
   line-height: 60px;
-  font-size: 16px;
-  font-weight: bold;
-  overflow: hidden;
-  border-bottom: 1px solid #e3e4e5;
+  font-size: 20px;
 `
 
 export const HeaderLogoBox = styled.div`
   margin-left: 10px;
+  font-size: 30px;
 `
 
 export const HeaderLogo = styled.img`
@@ -29,15 +37,16 @@ export const HeaderNavgationBox = styled.ul`
   margin-left: 50px;
 `
 export const HeaderNavgationlist = styled.li`
-  color: #333;
   margin-right: 30px;
   cursor: pointer;
 `
 export const HeaderMeta = styled.li`
-  color: #333;
   margin-right: 30px;
   span {
     margin-left: 20px;
     cursor: pointer;
+    i {
+      font-size: 12px;
+    }
   }
 `

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 const NotFound = lazy(() => import('../pages/404'))
 const Home = lazy(() => import('../pages/Home'))
-const ProvideLiquidity = lazy(() => import('../pages/ProvideLiquidity'))
-const Header = lazy(() => import('../pages/Header'))
+const Trade = lazy(() => import('../pages/Trade'))
+const Header = lazy(() => import('../components/Header'))
 
 const Containers: CustomRouter.Route[] = [
 	{
@@ -15,11 +15,11 @@ const Containers: CustomRouter.Route[] = [
 		component: Home
 	},
 	{
-		name: 'flow',
-		path: '/flow',
+		name: 'Trade',
+		path: '/trade',
 		exact: true,
 		showHeader: true,
-		component: ProvideLiquidity
+		component: Trade
 	},
 	{
 		name: '404',
@@ -38,16 +38,17 @@ export default () => {
 					render={(props: any) => (
 						<>
 							<Header />
-							<Switch location={ props.location }>
-								{Containers.map(container => (
-									<React.Fragment key={ container.name }>
-										<Route
-											{...container}
-										/>
-									</React.Fragment>
-								))}
-								<Redirect from="*" to="/404" />
-							</Switch>
+              {Containers.map(container => {
+                  console.log(container)
+                  return (
+                    <React.Fragment key={ container.name }>
+                      <Route
+                        {...container}
+                        key={ container.name }
+                      />
+                    </React.Fragment>
+                  )
+                })}
 						</>
 					)}>
 				</Route>
