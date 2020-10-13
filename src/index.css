@@ -1,4 +1,4 @@
-body {
+  body {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -77,4 +77,7 @@ input:-ms-input-placeholder {
 input::-webkit-input-placeholder {
     color: #ddd;
     opacity: 1;
+}
+.pull-right {
+  float: right;
 }
