@@ -5,6 +5,10 @@
       "Pool": "Pool",
       "Match": "Match",
       "wallet": "Connect Wallet"
-    }
+    },
+    "trade": {
+      "pair": "Pair"
+    },
+    "pool": {}
   }
 }

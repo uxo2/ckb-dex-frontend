@@ -6,8 +6,6 @@ export const HeaderBox = styled.div`
   margin: 0 auto;
   overflow: hidden;
   border-bottom: 1px solid #e3e4e5;
-  background-color: #000;
-  color: #fff;
 `
 
 export const HeaderPanel = styled.div`
@@ -22,31 +20,23 @@ export const HeaderPanel = styled.div`
 
 export const HeaderLogoBox = styled.div`
   margin-left: 10px;
-  font-size: 30px;
-`
-
-export const HeaderLogo = styled.img`
-  width: 70px;
-  height: 50px;
+  font-weight: 900;
+  font-size: 26px;
+  color: #517788;
 `
 export const HeaderNavgationBox = styled.ul`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex: 1;
   align-items: center;
   margin-left: 50px;
 `
 export const HeaderNavgationlist = styled.li`
-  margin-right: 30px;
+  margin: 0 50px;
+  text-align: center;
   cursor: pointer;
+  color: rgba(0, 106, 151, 0.6);
 `
 export const HeaderMeta = styled.li`
   margin-right: 30px;
-  span {
-    margin-left: 20px;
-    cursor: pointer;
-    i {
-      font-size: 12px;
-    }
-  }
 `

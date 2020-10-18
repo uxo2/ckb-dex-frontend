@@ -22,8 +22,8 @@ export const TradePage = styled.div`
   }
 `
 export const TradeForm = styled.div`
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
 `
 
 export const ConectIconBox = styled.div`

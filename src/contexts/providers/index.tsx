@@ -11,12 +11,7 @@ const withProviders = (Comp: React.ComponentType) => (props: React.Props<any>) =
   const [providers, dispatch] = useReducer(reducer, initState)
 
   return (
-    <AppContext.Provider
-      value={{
-        state: providers,
-        dispatch,
-      }}
-    >
+    <AppContext.Provider value={{ state: providers, dispatch }}>
       <Comp {...props} />
     </AppContext.Provider>
   )
