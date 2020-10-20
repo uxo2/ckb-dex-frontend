@@ -14,7 +14,9 @@ declare namespace State {
     loading: boolean
     language: 'en' | 'zh',
     appWidth: number
-    appHeight: number
+    appHeight: number,
+    hasConnectWallet: boolean,
+    address: string
   }
 
   interface FetchStatusValue {
@@ -26,18 +28,12 @@ declare namespace State {
 
   export type FetchStatus = keyof FetchStatusValue
 
-  export interface PageState 
-    extends xx, 
-    yy {}
-
-  interface xx {
-    a: number,
-    b: string
+  export interface PageState {
+    counterState: CounterState
   }
-
-  interface yy {
-    c: boolean,
-    d: string[]
+  
+  interface CounterState {
+    walletList: string[]
   }
 
   export interface AppState extends PageState {

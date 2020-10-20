@@ -1,12 +1,24 @@
 import React from 'react'
 import {
-  PopoverBox
+  PopoverBox,
+  ConnectList
 } from './styled'
+import { 
+  ConnectLists
+} from '../../../utils/const'
 
 export default () => { 
+  const handleConnect = () => {}
   return ( 
     <PopoverBox>
-      wating...
+      {
+        ConnectLists.map(way => (
+          <ConnectList onClick={() => handleConnect()}>
+            <img src={way.logo}></img>
+            {way.name}
+          </ConnectList>
+        ))
+      }
     </PopoverBox>
   )
 }

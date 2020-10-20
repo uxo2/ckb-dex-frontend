@@ -1,16 +1,15 @@
 import React from 'react'
 import { Form, Input, Button, Popover } from 'antd'
 import i18n from '../../utils/i18n'
-import { 
-  DownOutlined,
-  LeftOutlined
-} from '@ant-design/icons'
-import { 
+import { useAppState } from '../../contexts/providers'
+import {
   TradePage,
   TradeContent,
   TradeForm,
   ConectIconBox
 } from './styled'
+
+console.log(useAppState)
 
 export default () => {
   const FormLayoutDemo = () => {
@@ -20,15 +19,7 @@ export default () => {
         <li>Nothing</li>
       </ul>
     )
-    const triggerForm = () => {
-
-    }
     return (
-      // <TradeFormBox>
-      //   <TradeNotLogin>
-      //     <Trade
-      //   </TradeNotLogin>
-      // </TradeFormBox>
       <div className="formBox">
         <div className="header">
           <span>{i18n.t('trade.pair')}</span>
@@ -45,7 +36,7 @@ export default () => {
               CKB
             </Button>
           </Popover>
-          <Button type="text" onClick={() => triggerForm()}></Button>
+          <Button type="text"></Button>
         </div>
         <Form
           layout="vertical"
@@ -66,7 +57,7 @@ export default () => {
             <Input placeholder="Rate" suffix="DAI / CKB" type="number" />
           </Form.Item>
           <ConectIconBox>
-            <Button icon={ <DownOutlined /> } shape="circle"></Button>
+            <Button shape="circle"></Button>
           </ConectIconBox>
           <Form.Item label="You Receive">
           <Input placeholder="Receive" suffix="DAI" disabled />

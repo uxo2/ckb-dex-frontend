@@ -7,9 +7,7 @@ export const appReducer = (
   switch (type) {
     case PageActions.UpdateAddress:
       return {
-        ...state,
-        a: payload.a,
-        b: payload.b
+        ...state
       }
     default:
       return state

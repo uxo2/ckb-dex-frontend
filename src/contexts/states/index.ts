@@ -1,11 +1,11 @@
 import initApp from './app'
-import page from './page'
+import initCountState from './count'
 
 export type FetchStatus = keyof State.FetchStatus
 
 const initState: State.AppState = {
   app: initApp,
-  ...page
+  counterState: initCountState
 }
 
 export default initState

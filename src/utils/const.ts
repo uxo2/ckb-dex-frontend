@@ -1,3 +1,5 @@
+import metaMask from '../assets/img/wallet/metamask.png'
+
 export const HeaderNavgationLists = [
   {
     name: "Trade",
@@ -10,5 +12,12 @@ export const HeaderNavgationLists = [
   {
     name: "Match",
     path: "/match"
+  }
+]
+
+export const ConnectLists = [
+  {
+    name: 'MetaMask',
+    logo: metaMask
   }
 ]

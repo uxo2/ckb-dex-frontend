@@ -81,3 +81,14 @@ input::-webkit-input-placeholder {
 .pull-right {
   float: right;
 }
+
+/**  reset antd-design */
+
+/* popver */
+.no-arrorPoint .ant-popover-arrow {
+  display: none;
+}
+
+.no-arrorPoint .ant-popover-inner-content {
+  padding: 0;
+}
