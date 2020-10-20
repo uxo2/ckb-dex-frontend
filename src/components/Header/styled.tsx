@@ -7,15 +7,24 @@ export const HeaderBox = styled.div`
   overflow: hidden;
   border-bottom: 1px solid #e3e4e5;
 `
+export const MenuLiText = styled.span`
+  font-weight: bolder;
+  fobt-size: 16px;
+`
 
 export const HeaderPanel = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1400px;
-  margin: 0 auto;
+  padding: 0 120px;
+  box-size: border-box;
   line-height: 60px;
   font-size: 20px;
+  .ant-menu-horizontal {
+    line-height: 56px;
+    border-bottom: none;
+  }
 `
 
 export const HeaderLogoBox = styled.div`
@@ -31,12 +40,12 @@ export const HeaderNavgationBox = styled.ul`
   align-items: center;
   margin-left: 50px;
 `
-export const HeaderNavgationlist = styled.li`
-  margin: 0 50px;
-  text-align: center;
-  cursor: pointer;
-  color: rgba(0, 106, 151, 0.6);
-`
-export const HeaderMeta = styled.li`
+
+export const HeaderMeta = styled.div`
   margin-right: 30px;
+  .collect-btn {
+    color: #006A97;
+    font-weight: 500;
+    border-color: #006A97;
+  }
 `

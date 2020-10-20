@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Input, Button, Popover } from 'antd'
 import i18n from '../../utils/i18n'
 import { 
@@ -7,9 +7,10 @@ import {
 } from '@ant-design/icons'
 import { 
   TradePage,
+  TradeContent,
   TradeForm,
   ConectIconBox
-} from './styled' 
+} from './styled'
 
 export default () => {
   const FormLayoutDemo = () => {
@@ -23,23 +24,28 @@ export default () => {
 
     }
     return (
+      // <TradeFormBox>
+      //   <TradeNotLogin>
+      //     <Trade
+      //   </TradeNotLogin>
+      // </TradeFormBox>
       <div className="formBox">
         <div className="header">
           <span>{i18n.t('trade.pair')}</span>
           <Popover placement="bottomRight" title='' content={ PopverContent } trigger="click">
             <span></span>
             <Button type="text">
-              DAI<DownOutlined />
+              DAI
             </Button>
           </Popover>
           /
           <Popover placement="bottomRight" title='' content={ PopverContent } trigger="click">
             <span></span>
             <Button type="text">
-              CKB<DownOutlined />
+              CKB
             </Button>
           </Popover>
-          <Button type="text" icon={ <LeftOutlined /> } onClick={() => triggerForm()}></Button>
+          <Button type="text" onClick={() => triggerForm()}></Button>
         </div>
         <Form
           layout="vertical"
@@ -74,9 +80,11 @@ export default () => {
   }
   return (
     <TradePage className="Trade">
-      <TradeForm>
-        <FormLayoutDemo />
-      </TradeForm>
+      <TradeContent>
+        <TradeForm>
+          <FormLayoutDemo />
+        </TradeForm>
+      </TradeContent>
     </TradePage>
   )
 }
